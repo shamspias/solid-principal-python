@@ -1,18 +1,11 @@
-from abc import ABC, abstractmethod
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
 
-class Animal(ABC):
-    @abstractmethod
-    def eat(self):
-        pass
+    def area(self):
+        return self.width * self.height
 
-class Bird(Animal):
-    def eat(self):
-        pass
-    def fly(self):
-        pass
-
-class Fish(Animals):
-    def eat(self):
-        pass
-    def swim(self):
-        pass
+class Square(Rectangle):
+    def __init__(self, side):
+        super().__init__(side, side)
